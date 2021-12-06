@@ -23,11 +23,11 @@ public class IndexController {
     @RequestMapping({"", "/", "/index"})
     public String getIndexPage() {
 
-//        Optional<Category> optionalCategory = categoryRepository.findByDescription("American");
-//        Optional<UnitOfMeasure> unitOfMeasureOptional = unitOfMeasureRepository.findByDescription("Teaspoon");
-//
-//        System.out.println("Cat id is: " + optionalCategory.get().getId());
-//        System.out.println("UOM id is: " + unitOfMeasureOptional.get().getId());
+        Optional<Category> optionalCategory = categoryRepository.findByDescription("American");
+        Optional<UnitOfMeasure> unitOfMeasureOptional = unitOfMeasureRepository.findByDescription("Teaspoon");
+
+        System.out.println("Cat id is: " + optionalCategory.get().getId());
+        System.out.println("UOM id is: " + unitOfMeasureOptional.get().getId());
 
         return "index";
     }
